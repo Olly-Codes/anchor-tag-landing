@@ -43,34 +43,35 @@ function FeaturesSection() {
 
 
   return (
-    <section id="Features">
-        <div>
-            <h2>Features</h2>
-            <p>Anchor Tag's aim is to ensure that you have a quick and easy experience when accessing the bookmarks of your favorite websites.</p>
+    <section id="Features" className="relative h-screen">
+        <div className="w-full flex flex-col justify-center items-center">
+            <h2 className="text-2xl font-bold mb-4 mt-8">Features</h2>
+            <p className="w-100 text-center opacity-50 mb-8">Anchor Tag's aim is to ensure that you have a quick and easy experience when accessing the bookmarks of your favorite websites.</p>
         </div>
 
-        <div>
-            {tabsContent.map((tab, index) => (
-                <button 
-                    type="button" 
-                    key={index}
-                    className={activeTab === index ? "text-red-300" : "" }
-                    onClick={() => handleActiveTab(index)}
-                >{tab.tabTtitle}</button>
-            ))}
-            <div>
-                <div>
+        <div className="flex flex-col items-center">
+            <div className="flex justify-center items-center gap-20 border-b border-gray-400">
+                {tabsContent.map((tab, index) => (
+                    <button 
+                        type="button" 
+                        key={index}
+                        className={`pb-4 font-medium cursor-pointer ${activeTab === index ? "text-primary-red border-b-4" : ""}`}
+                        onClick={() => handleActiveTab(index)}
+                    >{tab.tabTtitle}</button>
+                ))}
+            </div>
+            <div className="grid grid-cols-2 mt-20 gap-20 max-w-300">
+                <div className="flex items-center justify-center">
                     <img src={`/${description.imageURL}`} alt={`${description.title}'s illustration`} />
                 </div>
-                <div>
-                    <h3>{description.title}</h3>
-                    <p>{description.body}</p>
-                </div>
-                 <div>
-                    <button type="button">More info</button>
+                <div className="flex flex-col justify-center">
+                    <h3 className="text-4xl font-bold mb-4">{description.title}</h3>
+                    <p className="w-100 opacity-50 mb-10">{description.body}</p>
+                    <button className="bg-primary-blue px-6 py-2 rounded-md text-white font-semibold self-start cursor-pointer" type="button">More info</button>
                 </div>
             </div>
         </div>
+        <div className="w-150 h-70 absolute left-0 bottom-0 bg-primary-blue -z-1 rounded-br-4xl"></div>
     </section>
   );
 }
