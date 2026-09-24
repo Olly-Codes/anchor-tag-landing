@@ -66,6 +66,9 @@ function FeaturesSection() {
                     <h3>{description.title}</h3>
                     <p>{description.body}</p>
                 </div>
+                 <div>
+                    <button type="button">More info</button>
+                </div>
             </div>
         </div>
     </section>
