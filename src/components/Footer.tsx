@@ -1,9 +1,9 @@
 function Footer() {
 
      const links = [
-        {label: "Features"},
-        {label: "Pricing"},
-        {label: "Contact"},
+        {label: "Features", href: "Features"},
+        {label: "Pricing", href: "Pricing"},
+        {label: "Contact", href: "Contact"},
     ];
 
   return (
@@ -11,7 +11,7 @@ function Footer() {
         <div>
             <img src="/logo-anchortag.svg" alt="Anchor Tag logo" />
             {links.map((link) => (
-                <a href="#" key={link.label}>{link.label}</a>
+                <a href={`#${link.href}`} key={link.label}>{link.label}</a>
             ))}
         </div>
         <div>

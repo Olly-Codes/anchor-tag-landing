@@ -1,6 +1,6 @@
 function ContactSection() {
   return (
-    <section>
+    <section id="Contact">
         <form>
             <p>You can join us below</p>
             <h4>Stay up-to-date with how Anchor Tag is developing</h4>

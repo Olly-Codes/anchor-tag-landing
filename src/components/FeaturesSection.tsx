@@ -43,7 +43,7 @@ function FeaturesSection() {
 
 
   return (
-    <section>
+    <section id="Features">
         <div>
             <h2>Features</h2>
             <p>Anchor Tag's aim is to ensure that you have a quick and easy experience when accessing the bookmarks of your favorite websites.</p>

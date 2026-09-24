@@ -1,17 +1,17 @@
 function Navbar() {
 
     const links = [
-        {label: "Features"},
-        {label: "Pricing"},
-        {label: "Contact"},
+        {label: "Features", href: "Features"},
+        {label: "Pricing", href: "Pricing"},
+        {label: "Contact", href: "Contact"},
     ];
   return (
     <nav>
-        <ul>
+        <div>
             {links.map((link) => (
-                <li key={link.label}>{link.label}</li>
+                <a href={`#${link.href}`} key={link.label}>{link.label}</a>
             ))}
-        </ul>
+        </div>
         <button type="button">Login</button>
     </nav>
   );
