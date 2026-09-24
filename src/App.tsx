@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import FAQSection from "./components/FAQSection";
 import HeroSection from "./components/HeroSection";
 import ContactSection from "./components/ContactSection";
@@ -14,6 +15,7 @@ function App() {
       <DownloadSection />
       <FAQSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 }
