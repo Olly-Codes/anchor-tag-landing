@@ -7,12 +7,15 @@ function Navbar() {
     ];
   return (
     <nav>
-        <div>
+        <div className="flex items-center gap-8 uppercase text-sm font-bold">
             {links.map((link) => (
-                <a href={`#${link.href}`} key={link.label}>{link.label}</a>
+                <a className="font-light text-neutral-blue" href={`#${link.href}`} key={link.label}>{link.label}</a>
             ))}
+            <button 
+                type="button" 
+                className="uppercase px-6 py-2 rounded-md text-white bg-primary-red cursor-pointer">Login</button>
         </div>
-        <button type="button">Login</button>
+        
     </nav>
   );
 }
