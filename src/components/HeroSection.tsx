@@ -24,7 +24,7 @@ function HeroSection() {
                 <img src="/illustration-hero.svg" alt="Hero Section Illustration" />
             </div>
         </div>
-        <div className="w-150 h-70 absolute right-0 bottom-0 bg-primary-blue -z-1 rounded-bl-full"></div>
+        <div className="w-150 h-70 absolute right-0 bottom-0 bg-primary-blue -z-1 rounded-bl-4xl"></div>
     </section>
   );
 }
