@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import FAQSection from "./components/FAQSection";
 import HeroSection from "./components/HeroSection";
+import ContactSection from "./components/ContactSection";
 import FeaturesSection from "./components/FeaturesSection";
 import DownloadSection from "./components/DownloadSection";
 
@@ -12,6 +13,7 @@ function App() {
       <FeaturesSection />
       <DownloadSection />
       <FAQSection />
+      <ContactSection />
     </main>
   );
 }
