@@ -45,22 +45,24 @@ function FAQSection() {
 
   return (
     <section>
-        <div>
-            <h2>Frequenty Asked Questions</h2>
-            <p>Here are some of our FAQs. If youhave any other questions you'd like answered, pleasefeel free to email us</p>
+        <div className="w-full flex flex-col justify-center items-center">
+            <h2 className="text-2xl font-bold mb-4 mt-20">Frequenty Asked Questions</h2>
+            <p className="w-150 text-center opacity-50 mb-8">Here are some of our FAQs. If you have any other questions you'd like answered, please feel free to email us</p>
         </div>
 
-        <div className="transition-all duration-300">
+        <div className="flex flex-col items-center ransition-all duration-300">
             {FAQContent.map((faq, index) => (
-                <>
+                <div className="max-w-120 flex flex-col justify-center p-4 border-b-2 border-gray-200">
                     <div 
                         key={faq.id}
+                        className={`flex justify-between items-center cursor-pointer hover:text-primary-red ${faq.open ? 'text-primary-red' : ''}`}
                         onClick={() => handleOpen(index)}
+                        
                     >
                         {faq.question}
                         <span>
                             {faq.open ? (
-                                <img src="/icon-close.svg" alt="Close faq icon" />
+                                <svg className="stroke-current rotate-180 text-primary-red" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none"  stroke-width="3" d="M1 1l8 8 8-8"/></svg>
                             ) : (
                                 <img src="/icon-arrow.svg" alt="Open faq icon" />
                             )}
@@ -68,16 +70,21 @@ function FAQSection() {
                     </div>
                     <div 
                         key={index}
-                        className={`transition-all duration-300 ease ${faq.open === true ? "opacity-100 mb-2" : "opacity-0 max-h-0 overflow-y-hidden"}`}
+                        className={`transition-all duration-300 ease ${faq.open === true ? "opacity-50 mb-2 mt-4" : "opacity-0 max-h-0 overflow-y-hidden"}`}
                     >
                         {faq.answer}
                     </div>
-                </>
+                </div>
             ))}
         </div>
 
-        <div>
-            <button type="button">More info</button>
+        <div className="flex justify-center mt-10 mb-20">
+            <button
+                 type="button"
+                className="bg-primary-blue px-4 py-2 rounded-md text-white font-semibold self-start cursor-pointer"
+            >
+                More info
+            </button>
         </div>
     </section>
   );
