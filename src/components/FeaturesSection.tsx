@@ -56,7 +56,7 @@ function FeaturesSection() {
                     <button 
                         type="button" 
                         key={index}
-                        className={`pb-4 font-medium cursor-pointer ${activeTab === index ? "text-primary-red border-b-4" : ""}`}
+                        className={`hover:text-primary-red pb-4 font-medium cursor-pointer ${activeTab === index ? "text-primary-red border-b-4" : ""}`}
                         onClick={() => handleActiveTab(index)}
                     >{tab.tabTtitle}</button>
                 ))}
