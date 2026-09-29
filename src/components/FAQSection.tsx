@@ -89,6 +89,7 @@ function FAQSection() {
                 borderColor="border-primary-blue" 
                 hoverBgColor="hover:bg-white" 
                 hoverTextColor="hover:text-primary-blue" 
+                buttonType="button"
                 upperCase={false}
                 boldness="font-semibold"
             />
