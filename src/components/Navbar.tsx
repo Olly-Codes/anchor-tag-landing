@@ -11,7 +11,11 @@ function Navbar() {
     <nav>
         <div className="flex items-center gap-8 uppercase text-sm font-bold">
             {links.map((link) => (
-                <a className="font-light text-neutral-blue" href={`#${link.href}`} key={link.label}>{link.label}</a>
+                <a 
+                    className="font-light text-neutral-blue hover:text-primary-red" 
+                    href={`#${link.href}`} 
+                    key={link.label}
+                >{link.label}</a>
             ))}
             <Button 
                 buttonText="Login" 
