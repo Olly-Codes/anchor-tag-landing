@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 function FAQSection() {
 
@@ -79,12 +80,18 @@ function FAQSection() {
         </div>
 
         <div className="flex justify-center mt-10 mb-20">
-            <button
-                 type="button"
-                className="bg-primary-blue px-4 py-2 rounded-md text-white font-semibold self-start cursor-pointer"
-            >
-                More info
-            </button>
+            <Button 
+                buttonText="More info" 
+                padx="px-6" 
+                pady="py-2" 
+                bgColor="bg-primary-blue" 
+                textColor="text-white" 
+                borderColor="border-primary-blue" 
+                hoverBgColor="hover:bg-white" 
+                hoverTextColor="hover:text-primary-blue" 
+                upperCase={false}
+                boldness="font-semibold"
+            />
         </div>
     </section>
   );

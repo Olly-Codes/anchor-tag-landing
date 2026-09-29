@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 function HeroSection() {
   return (
     <section className="flex justify-center relative">
@@ -6,18 +8,32 @@ function HeroSection() {
                 <h1 className="text-4xl font-bold mb-4">A Simple Anchor to your Bookmarks</h1>
                 <p className="opacity-50 mb-4">Anchor Tag is a bookmark manager with a simple and clean interface that assists you in organizing your favorite websites. You simply open a new tab and see your organized bookmarks. Completely free.</p>
                 <div className="flex gap-4">
-                    <button 
-                        type="button"
-                        className="bg-primary-blue px-6 py-2 rounded-md text-white font-semibold"
-                    >
-                        Get it on Chrome
-                    </button>
-                    <button 
-                        type="button"
-                        className="bg-primary-red px-6 py-2 rounded-md text-white font-semibold"
-                    >
-                        Get it on FireFox
-                    </button>
+                    <Button 
+                        buttonText="Get it on Chrome" 
+                        padx="px-6" 
+                        pady="py-2" 
+                        bgColor="bg-primary-blue" 
+                        textColor="text-white" 
+                        borderColor="border-primary-blue" 
+                        hoverBgColor="hover:bg-white" 
+                        hoverTextColor="hover:text-primary-blue" 
+                        buttonType="button"
+                        upperCase={false}
+                        boldness="font-semibold"
+                    />
+                    <Button 
+                        buttonText="Get it on FireFox" 
+                        padx="px-6" 
+                        pady="py-2" 
+                        bgColor="bg-primary-red" 
+                        textColor="text-white" 
+                        borderColor="border-primary-red" 
+                        hoverBgColor="hover:bg-white" 
+                        hoverTextColor="hover:text-primary-red" 
+                        buttonType="button"
+                        upperCase={false}
+                        boldness="font-semibold"
+                    />
                 </div>
             </div>
             <div className="flex-2">

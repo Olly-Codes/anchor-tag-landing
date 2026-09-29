@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
  const tabsContent = [
         {
@@ -64,10 +65,22 @@ function FeaturesSection() {
                 <div className="flex items-center justify-center">
                     <img src={`/${description.imageURL}`} alt={`${description.title}'s illustration`} />
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center items-start">
                     <h3 className="text-4xl font-bold mb-4">{description.title}</h3>
                     <p className="w-100 opacity-50 mb-10">{description.body}</p>
-                    <button className="bg-primary-blue px-6 py-2 rounded-md text-white font-semibold self-start cursor-pointer" type="button">More info</button>
+                    <Button 
+                        buttonText="More info" 
+                        padx="px-6" 
+                        pady="py-2" 
+                        bgColor="bg-primary-blue" 
+                        textColor="text-white" 
+                        borderColor="border-primary-blue" 
+                        hoverBgColor="hover:bg-white" 
+                        hoverTextColor="hover:text-primary-blue" 
+                        buttonType="button"
+                        upperCase={false}
+                        boldness="font-semibold"
+                    />
                 </div>
             </div>
         </div>

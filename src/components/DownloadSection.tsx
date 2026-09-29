@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const cardContent = [
         {
             title: "Add to Chrome",
@@ -38,8 +40,20 @@ function DownloadSection() {
                     <img className="mb-8" src={`/${card.imageURL}`} />
                     <h3 className="font-bold mb-4">{card.title}</h3>
                     <p className="opacity-50 text-sm mb-20">{card.description}</p>
-                    <img src="/bg-dots.svg" />
-                    <button className="bg-primary-blue px-6 py-2 rounded-md text-white font-semibold self-start cursor-pointer absolute bottom-5 left-2 right-2" type="button">Add & Install Extension</button>
+                    <img src="/bg-dots.svg" className="mb-8" />
+                    <Button 
+                        buttonText="Add & Install Extension" 
+                        padx="px-6" 
+                        pady="py-2" 
+                        bgColor="bg-primary-blue" 
+                        textColor="text-white" 
+                        borderColor="border-primary-blue" 
+                        hoverBgColor="hover:bg-white" 
+                        hoverTextColor="hover:text-primary-blue" 
+                        buttonType="button"
+                        upperCase={false}
+                        boldness="font-semibold"
+                    />
                 </div>
             ))}
         </div>

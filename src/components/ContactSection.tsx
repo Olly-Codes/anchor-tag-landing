@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 function ContactSection() {
   return (
     <section className="p-20 flex flex-col justify-center items-center bg-primary-blue" id="Contact">
@@ -13,12 +15,19 @@ function ContactSection() {
                   className="bg-white px-4 py-2 rounded-md text-gray-400"
                   placeholder="Enter your email..."
                 />
-                <button 
-                  type="submit"
-                  className="bg-primary-red px-6 py-2 rounded-md border-2 border-primary-red text-white font-semibold self-start cursor-pointer hover:bg-white hover:text-primary-red transition-all duration-300 ease"
-                >
-                  Contact Us
-                </button>
+                <Button 
+                      buttonText="Contact Us" 
+                      padx="px-6" 
+                      pady="py-2" 
+                      bgColor="bg-primary-red" 
+                      textColor="text-white" 
+                      borderColor="border-primary-red" 
+                      hoverBgColor="hover:bg-white" 
+                      hoverTextColor="hover:text-primary-red"
+                      buttonType="submit"
+                      upperCase={false}
+                      boldness="font-semibold"
+                  />
             </div>
         </form>
     </section>
