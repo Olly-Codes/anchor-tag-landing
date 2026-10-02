@@ -8,7 +8,7 @@ function Navbar() {
         {label: "Contact", href: "Contact"},
     ];
   return (
-    <nav>
+    <nav className="hidden lg:block">
         <div className="flex items-center gap-8 uppercase text-sm font-bold">
             {links.map((link) => (
                 <a 

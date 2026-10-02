@@ -2,12 +2,12 @@ import Button from "./Button";
 
 function HeroSection() {
   return (
-    <section className="flex justify-center relative">
-        <div className="grid grid-cols-2 max-w-300">
-            <div className="flex flex-col justify-center">
-                <h1 className="text-4xl font-bold mb-4">A Simple Anchor to your Bookmarks</h1>
-                <p className="opacity-50 mb-4">Anchor Tag is a bookmark manager with a simple and clean interface that assists you in organizing your favorite websites. You simply open a new tab and see your organized bookmarks. Completely free.</p>
-                <div className="flex gap-4">
+    <section className="flex justify-center lg:relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-300">
+            <div className="order-2 lg:order-1 flex flex-col justify-center">
+                <h1 className="text-4xl font-bold mb-4 text-center lg:text-left mt-20 lg:mt-0">A Simple Anchor to your Bookmarks</h1>
+                <p className="opacity-50 mb-4 text-center lg:text-left px-8 lg:px-0">Anchor Tag is a bookmark manager with a simple and clean interface that assists you in organizing your favorite websites. You simply open a new tab and see your organized bookmarks. Completely free.</p>
+                <div className="flex gap-4 w-full justify-center lg:justify-normal lg:w-auto">
                     <Button 
                         buttonText="Get it on Chrome" 
                         padx="px-6" 
@@ -36,11 +36,12 @@ function HeroSection() {
                     />
                 </div>
             </div>
-            <div className="flex-2">
-                <img src="/illustration-hero.svg" alt="Hero Section Illustration" />
+            <div className="flex-2 order-1 lg:order-2 relative lg:static flex justify-center">
+                <img className="w-150 lg:w-auto" src="/illustration-hero.svg" alt="Hero Section Illustration" />
+                <div className="block lg:hidden w-80 h-50 md:w-150 md:h-80 absolute right-0 bottom-0 bg-primary-blue -z-1 rounded-bl-4xl"></div>
             </div>
         </div>
-        <div className="w-150 h-70 absolute right-0 bottom-0 bg-primary-blue -z-1 rounded-bl-4xl"></div>
+        <div className="hidden lg:block w-120 h-70 absolute right-0 bottom-0 bg-primary-blue -z-1 rounded-bl-4xl"></div>
     </section>
   );
 }
