@@ -48,12 +48,12 @@ function FAQSection() {
     <section>
         <div className="w-full flex flex-col justify-center items-center">
             <h2 className="text-2xl font-bold mb-4 mt-20">Frequenty Asked Questions</h2>
-            <p className="w-150 text-center opacity-50 mb-8">Here are some of our FAQs. If you have any other questions you'd like answered, please feel free to email us</p>
+            <p className="w-full lg:w-150 text-center opacity-50 mb-8 px-8 lg:px-0">Here are some of our FAQs. If you have any other questions you'd like answered, please feel free to email us</p>
         </div>
 
         <div className="flex flex-col items-center ransition-all duration-300">
             {FAQContent.map((faq, index) => (
-                <div className="max-w-120 flex flex-col justify-center p-4 border-b-2 border-gray-200">
+                <div className="max-w-80 lg:max-w-120 flex flex-col justify-center p-4 border-b-2 border-gray-200">
                     <div 
                         key={faq.id}
                         className={`flex justify-between items-center cursor-pointer hover:text-primary-red ${faq.open ? 'text-primary-red' : ''}`}
