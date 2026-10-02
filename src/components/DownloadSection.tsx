@@ -29,12 +29,12 @@ function DownloadSection() {
 
   return (
     <section className="h-auto">
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="w-full flex flex-col justify-center items-center mt-40 lg:mt-0">
             <h2 className="text-2xl font-bold mb-4 mt-20">Download the extension</h2>
-            <p className="w-100 text-center opacity-50 mb-8">Support for more browsers are planned. Do let us know if you have a favorite you'd like for Anchor Tag to include.</p>
+            <p className="w-full lg:w-100 text-center opacity-50 mb-8 px-8 lg:px-0">Support for more browsers are planned. Do let us know if you have a favorite you'd like for Anchor Tag to include.</p>
         </div>
 
-        <div className="flex justify-center gap-12">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-12">
             {cardContent.map((card) => (
                 <div className={`h-100 w-70 flex flex-col relative items-center shadow-sm bg-white p-6 rounded-lg mt-${card.mt}`} key={card.title}>
                     <img className="mb-8" src={`/${card.imageURL}`} />
