@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 function Header() {
   return (
     <header className="flex lg:justify-center h-50">
-        <div className="w-full px-10 lg:w-300 flex justify-between items-center">
+        <div className="w-full px-10 lg:max-w-11/12 flex justify-between items-center lg:px-0">
             <a href="#">
                 <img width={200} height={200} src="/logo-anchortag.svg" alt="Home page" />
             </a>
