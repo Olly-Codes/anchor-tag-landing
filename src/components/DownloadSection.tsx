@@ -28,7 +28,7 @@ const cardContent = [
 function DownloadSection() {
 
   return (
-    <section className="h-auto">
+    <section id="Download" className="h-auto">
         <div className="w-full flex flex-col justify-center items-center mt-40 sm:mt-0">
             <h2 className="text-2xl font-bold mb-4 mt-20">Download the extension</h2>
             <p className="w-full lg:w-100 text-center opacity-50 mb-8 px-8 lg:px-0">Support for more browsers are planned. Do let us know if you have a favorite you'd like for Anchor Tag to include.</p>

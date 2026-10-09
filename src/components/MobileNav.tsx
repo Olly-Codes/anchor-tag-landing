@@ -18,7 +18,7 @@ function MobileNav({ onNavClose, isNavOpen }: MobileNavProps) {
 
     const mobileLinks = [
         {label: "Features", href: "Features"},
-        {label: "Pricing", href: "Pricing"},
+        {label: "Download", href: "Download"},
         {label: "Contact", href: "Contact"},
     ];
 
