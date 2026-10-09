@@ -44,7 +44,7 @@ function FeaturesSection() {
 
 
   return (
-    <section id="Features" className="relative h-screen mt-20 lg:mt-0">
+    <section id="Features" className="h-auto relative md:h-screen mt-20 lg:mt-0">
         <div className="w-full flex flex-col justify-center items-center">
             <h2 className="text-2xl font-bold mb-4 mt-8">Features</h2>
             <p className="w-full md:w-100 text-center opacity-50 mb-8 px-8 lg:px-0">Anchor Tag's aim is to ensure that you have a quick and easy experience when accessing the bookmarks of your favorite websites.</p>
