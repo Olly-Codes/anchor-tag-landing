@@ -47,7 +47,7 @@ function FeaturesSection() {
     <section id="Features" className="relative h-screen mt-20 lg:mt-0">
         <div className="w-full flex flex-col justify-center items-center">
             <h2 className="text-2xl font-bold mb-4 mt-8">Features</h2>
-            <p className="w-100 text-center opacity-50 mb-8 px-8 lg:px-0">Anchor Tag's aim is to ensure that you have a quick and easy experience when accessing the bookmarks of your favorite websites.</p>
+            <p className="w-full md:w-100 text-center opacity-50 mb-8 px-8 lg:px-0">Anchor Tag's aim is to ensure that you have a quick and easy experience when accessing the bookmarks of your favorite websites.</p>
         </div>
 
         <div className="flex flex-col items-center">
@@ -65,7 +65,7 @@ function FeaturesSection() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 gap-20">
                 <div className="relative flex items-center justify-center w-full">
-                    <img key={activeTab} className="w-full max-w-sm md:max-w-md lg:max-w-xl h-auto" src={`/${description.imageURL}`} alt={`${description.title}'s illustration`} />
+                    <img key={activeTab} className="w-full max-w-xs md:max-w-md lg:max-w-xl h-auto" src={`/${description.imageURL}`} alt={`${description.title}'s illustration`} />
                     <div className="absolute top-[20%] right-[25%] left-[-100vw] -bottom-5 bg-primary-blue -z-1 rounded-full"></div>
                 </div>
                 <div className="flex flex-col justify-center items-start">

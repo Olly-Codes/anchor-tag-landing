@@ -10,3 +10,7 @@
 
   --font-rubik: "Rubik", sans-serif;
 }
+
+* {
+  outline: 1px solid red !important;
+}
