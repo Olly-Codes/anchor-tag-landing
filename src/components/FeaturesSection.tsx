@@ -63,10 +63,10 @@ function FeaturesSection() {
                     </button>
                 ))}
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 gap-20 max-w-300">
-                <div className="flex items-center justify-center relative lg:static">
-                    <img className="w-80 lg:w-auto" src={`/${description.imageURL}`} alt={`${description.title}'s illustration`} />
-                    <div className="block lg:hidden w-70 h-40 absolute -left-10 lg:left-0 -bottom-10 lg:bottom-0 bg-primary-blue -z-1 rounded-br-4xl"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 gap-20">
+                <div className="relative flex items-center justify-center w-full">
+                    <img key={activeTab} className="w-full max-w-sm md:max-w-md lg:max-w-xl h-auto" src={`/${description.imageURL}`} alt={`${description.title}'s illustration`} />
+                    <div className="absolute top-[20%] right-[25%] left-[-100vw] -bottom-5 bg-primary-blue -z-1 rounded-full"></div>
                 </div>
                 <div className="flex flex-col justify-center items-start">
                     <h3 className="text-4xl font-bold mb-4 text-center lg:text-left w-full flex justify-center lg:block lg:w-auto">{description.title}</h3>
@@ -89,7 +89,6 @@ function FeaturesSection() {
                 </div>
             </div>
         </div>
-        <div className="hidden lg:block w-150 h-70 absolute left-0 bottom-0 bg-primary-blue -z-1 rounded-br-4xl"></div>
     </section>
   );
 }

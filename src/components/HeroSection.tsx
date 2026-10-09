@@ -2,7 +2,7 @@ import Button from "./Button";
 
 function HeroSection() {
   return (
-    <section className="flex justify-center lg:relative">
+    <section className="flex justify-center overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-11/12">
             <div className="order-2 lg:order-1 flex flex-col justify-center">
                 <h1 className="text-4xl font-bold mb-4 text-center lg:text-left mt-20 lg:mt-0">A Simple Anchor to your Bookmarks</h1>
@@ -36,12 +36,13 @@ function HeroSection() {
                     />
                 </div>
             </div>
-            <div className="flex-2 order-1 lg:order-2 relative lg:static flex justify-center">
-                <img className="w-150 lg:w-auto" src="/illustration-hero.svg" alt="Hero Section Illustration" />
-                <div className="block lg:hidden w-sm h-3/4 md:w-150 md:h-80 absolute right-0 bottom-0 bg-primary-blue -z-1 rounded-bl-4xl"></div>
+            <div className="order-1 lg:order-2 relative flex justify-center items-center w-full">
+                <img 
+                    className="w-full max-w-sm md:max-w-md lg:max-w-xl h-auto" src="/illustration-hero.svg" alt="Hero Section Illustration" />
+                <div 
+                    className="absolute top-[20%] left-[25%] right-[-100vw] bottom-0 bg-primary-blue -z-1 rounded-full"></div>
             </div>
         </div>
-        <div className="hidden lg:block w-sm h-3/4 absolute right-0 bottom-0 bg-primary-blue -z-1 rounded-bl-4xl"></div>
     </section>
   );
 }
