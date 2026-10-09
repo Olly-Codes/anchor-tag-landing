@@ -9,4 +9,21 @@
   --color-neutral-blue: hsl(229, 31%, 21%);
 
   --font-rubik: "Rubik", sans-serif;
+
+  --animate-slide: slideIn .2s ease;
+
+  @keyframes slideIn {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
+}
+
+.fixed-position {
+  position: fixed;
+}
+
+
