@@ -53,10 +53,12 @@ function FAQSection() {
 
         <div className="flex flex-col items-center ransition-all duration-300">
             {FAQContent.map((faq, index) => (
-                <div className="max-w-80 lg:max-w-120 flex flex-col justify-center p-4 border-b-2 border-gray-200">
-                    <div 
+                <h3 className="max-w-[70%] lg:max-w-120 flex flex-col justify-center p-4 border-b-2 border-gray-200">
+                    <button 
                         key={faq.id}
-                        className={`flex justify-between items-center cursor-pointer hover:text-primary-red ${faq.open ? 'text-primary-red' : ''}`}
+                        aria-expanded={faq.open}
+                        aria-controls={`faq-panel-${faq.id}`}
+                        className={`w-full flex justify-between items-center cursor-pointer hover:text-primary-red ${faq.open ? 'text-primary-red' : ''}`}
                         onClick={() => handleOpen(index)}
                         
                     >
@@ -68,14 +70,14 @@ function FAQSection() {
                                 <img src="/icon-arrow.svg" alt="Open faq icon" />
                             )}
                         </span>
-                    </div>
+                    </button>
                     <div 
                         key={index}
                         className={`transition-all duration-300 ease ${faq.open === true ? "opacity-50 mb-2 mt-4" : "opacity-0 max-h-0 overflow-y-hidden"}`}
                     >
                         {faq.answer}
                     </div>
-                </div>
+                </h3>
             ))}
         </div>
 
