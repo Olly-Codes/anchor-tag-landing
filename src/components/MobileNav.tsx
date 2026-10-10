@@ -30,13 +30,14 @@ function MobileNav({ onNavClose, isNavOpen }: MobileNavProps) {
                     height={220} 
                     src="/logo-anchortag-white.svg" 
                 />
-                <div className="w-5 h-5 cursor-pointer">
-                    <img
-                        className="w-full"
-                        src="/icon-close.svg" 
-                        onClick={() => onNavClose()}
-                    />
-                </div>
+                <button
+                    type="button"
+                    aria-label="Close menu"
+                    className="w-5 h-5 cursor-pointer"
+                    onClick={() => onNavClose()}
+                >
+                    <img className="w-full" src="/icon-close.svg" />
+                </button>
             </div>
 
             <div className="flex flex-col w-full mb-8">
