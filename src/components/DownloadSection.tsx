@@ -43,7 +43,7 @@ function DownloadSection() {
                     <img src="/bg-dots.svg" className="mb-8" />
                     <Button 
                         buttonText="Add & Install Extension" 
-                        padx="px-6" 
+                        padx="px-5" 
                         pady="py-2" 
                         bgColor="bg-primary-blue" 
                         textColor="text-white" 
