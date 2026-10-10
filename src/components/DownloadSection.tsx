@@ -3,6 +3,7 @@ import Button from "./Button";
 const cardContent = [
         {
             title: "Add to Chrome",
+            name: "Chrome",
             description: "Minimum version 62",
             imageURL: "logo-chrome.svg",
             offset: "lg:mt-0"
@@ -10,6 +11,7 @@ const cardContent = [
         },
         {
             title: "Add to Firefox",
+            name: "Firefox",
             description: "Minimum version 55",
             imageURL: "logo-firefox.svg",
             offset: "lg:mt-10"
@@ -17,6 +19,7 @@ const cardContent = [
         },
         {
             title: "Add to Opera",
+            name: "Opera",
             description: "Minimum version 46",
             imageURL: "logo-opera.svg",
             offset: "lg:mt-20"
@@ -37,10 +40,10 @@ function DownloadSection() {
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-12">
             {cardContent.map((card) => (
                 <div className={`h-100 w-70 flex flex-col relative items-center shadow-sm bg-white p-6 rounded-lg ${card.offset}`} key={card.title}>
-                    <img className="mb-8" src={`/${card.imageURL}`} />
+                    <img className="mb-8" src={`/${card.imageURL}`} alt={`${card.name} icon`} />
                     <h3 className="font-bold mb-4">{card.title}</h3>
                     <p className="opacity-50 text-sm mb-20">{card.description}</p>
-                    <img src="/bg-dots.svg" className="mb-8" />
+                    <img src="/bg-dots.svg" className="mb-8" alt="" />
                     <Button 
                         buttonText="Add & Install Extension" 
                         padx="px-5" 
