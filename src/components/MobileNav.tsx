@@ -15,14 +15,9 @@ function MobileNav({ onNavClose, isNavOpen }: MobileNavProps) {
 
         if (isNavOpen) {
             dialog.showModal();
-            document.body.classList.add('fixed-position');
         } else {
             dialog.close();
         }
-
-        return () => {
-            document.body.classList.remove('fixed-position');
-        };
     }, [isNavOpen]);
 
     const mobileLinks = [
