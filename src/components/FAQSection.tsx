@@ -47,31 +47,35 @@ function FAQSection() {
   return (
     <section>
         <div className="w-full flex flex-col justify-center items-center">
-            <h2 className="text-2xl font-bold mb-4 mt-20">Frequenty Asked Questions</h2>
+            <h2 className="text-2xl font-bold mb-4 mt-20">Frequently Asked Questions</h2>
             <p className="w-full lg:w-150 text-center opacity-50 mb-8 px-8 lg:px-0">Here are some of our FAQs. If you have any other questions you'd like answered, please feel free to email us</p>
         </div>
 
-        <div className="flex flex-col items-center ransition-all duration-300">
+        <div className="flex flex-col items-center transition-all duration-300">
             {FAQContent.map((faq, index) => (
-                <div className="max-w-80 lg:max-w-120 flex flex-col justify-center p-4 border-b-2 border-gray-200">
+                <div key={faq.id} className="max-w-[70%] lg:max-w-120 flex flex-col justify-center p-4 border-b-2 border-gray-200">
+                    <h3>
+                        <button
+                            type="button" 
+                            aria-expanded={faq.open}
+                            aria-controls={`faq-panel-${faq.id}`}
+                            className={`w-full flex justify-between items-center cursor-pointer hover:text-primary-red ${faq.open ? 'text-primary-red' : ''}`}
+                            onClick={() => handleOpen(index)}
+                            
+                        >
+                            {faq.question}
+                            <span>
+                                {faq.open ? (
+                                    <svg aria-hidden="true" className="stroke-current rotate-180 text-primary-red" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none"  strokeWidth="3" d="M1 1l8 8 8-8"/></svg>
+                                ) : (
+                                    <img src="/icon-arrow.svg" alt="" />
+                                )}
+                            </span>
+                        </button>
+                    </h3>
                     <div 
-                        key={faq.id}
-                        className={`flex justify-between items-center cursor-pointer hover:text-primary-red ${faq.open ? 'text-primary-red' : ''}`}
-                        onClick={() => handleOpen(index)}
-                        
-                    >
-                        {faq.question}
-                        <span>
-                            {faq.open ? (
-                                <svg className="stroke-current rotate-180 text-primary-red" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none"  stroke-width="3" d="M1 1l8 8 8-8"/></svg>
-                            ) : (
-                                <img src="/icon-arrow.svg" alt="Open faq icon" />
-                            )}
-                        </span>
-                    </div>
-                    <div 
-                        key={index}
-                        className={`transition-all duration-300 ease ${faq.open === true ? "opacity-50 mb-2 mt-4" : "opacity-0 max-h-0 overflow-y-hidden"}`}
+                        id={`faq-panel-${faq.id}`}
+                        className={`transition-all duration-300 ease ${faq.open ? "opacity-50 mb-2 mt-4" : "opacity-0 max-h-0 overflow-y-hidden"}`}
                     >
                         {faq.answer}
                     </div>
