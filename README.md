@@ -1,75 +1,26 @@
-# React + TypeScript + Vite
+# Anchor-tag landing page
+This is the landing page for a bookmark browser extension known as Anchor Tag. This project is built with React and TS. Since this is just the landing page, this page will allow you to download the extension to your own browser.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live preview: [comming soon]
 
-Currently, two official plugins are available:
+## Overview
+You are able to view the different sections that give you a better idea of what the extension is and what it is capable of doing. Eventually the ability to create an account so you can take your bookmarks anywhere will be available for users.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Desktop
+<img width="1920" height="4037" alt="AnchorTag - Landing Page Desktop" src="https://github.com/user-attachments/assets/a7baf81e-cafd-42a2-9b20-8e53eff864ee" />
 
-## React Compiler
+## Mobile
+<img width="625" height="6440" alt="AnchorTag - Landing Page Mobile" src="https://github.com/user-attachments/assets/a6ecf31f-dfa2-45cb-a416-5e740b9d4b94" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- React
+- TypeScript
 
-## Expanding the ESLint configuration
+## What I learned
+I chose to take on this challenge because I wanted more practice with React and Typescript along with Tailwindcss. I learnt how to better type my functions and React components along with taking a utility first approach with tailwindcss. Ensuring that things are responsive across different devices is what I struggled with the most. Not because I don't know my basic CSS but it was more understanding the different kind of classes I can use in tailwind instead.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## What I plan to do
+I plan to take this landing page idea and making it an actual extension that can help me organize and group my bookmarks better. I like the idea of learning how extensions work with browsers and what is actually going one with the many extensions people install daily.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+## Acknoweldgements
+This challenge was sourced from [Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6) with the goal to better my front end skills in both design and working with components. The challenge focused on building a front end, the rest is an idea I decided to expand upon.
