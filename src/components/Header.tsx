@@ -21,14 +21,15 @@ function Header() {
                   alt="Home page" 
                 />
             </a>
-            <img 
-              width={25} 
-              height={25} 
+            <button
+              type="button"
+              aria-label="Open menu"
+              aria-expanded={openNav}
               className="block lg:hidden cursor-pointer"
-              onClick={() => setOpenNav(true)} 
-              src="/icon-hamburger.svg" 
-              alt="menu icon"
-            />
+              onClick={() => setOpenNav(true)}
+            >
+              <img width={25} height={25} src="/icon-hamburger.svg" alt="menu icon" />
+            </button>
             <Navbar />
 
             {openNav && createPortal(

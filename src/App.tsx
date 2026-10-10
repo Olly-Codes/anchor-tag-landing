@@ -8,15 +8,17 @@ import DownloadSection from "./components/DownloadSection";
 
 function App() {
   return (
-    <main className="font-rubik">
+    <div className="font-rubik">
       <Header />
+      <main>
       <HeroSection />
       <FeaturesSection />
       <DownloadSection />
       <FAQSection />
       <ContactSection />
-      <Footer />
     </main>
+    <Footer />
+    </div>
   );
 }
 

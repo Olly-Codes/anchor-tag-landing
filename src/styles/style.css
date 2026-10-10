@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import url('https://fonts.google.com/specimen/Rubik');
 
 @theme {
   --color-primary-blue: hsl(231, 69%, 60%);
