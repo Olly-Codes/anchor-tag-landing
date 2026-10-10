@@ -1,7 +1,7 @@
 # Anchor-tag landing page
 This is the landing page for a bookmark browser extension known as Anchor Tag. This project is built with React and TS. Since this is just the landing page, this page will allow you to download the extension to your own browser.
 
-Live preview: [comming soon]
+Live preview: [Anchor Tag Website](https://anchor-tag-landing.vercel.app/)
 
 ## Overview
 You are able to view the different sections that give you a better idea of what the extension is and what it is capable of doing. Eventually the ability to create an account so you can take your bookmarks anywhere will be available for users.  
